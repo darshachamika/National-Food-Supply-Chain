@@ -97,17 +97,17 @@ const Contact = () => {
                                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                                     <div>
                                         <label className="block mb-2 text-xs font-bold tracking-wide text-gray-500 uppercase">First Name</label>
-                                        <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="John" required className="w-full px-5 py-4 transition-all bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm" />
+                                        <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Danushka" required className="w-full px-5 py-4 transition-all bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm" />
                                     </div>
                                     <div>
                                         <label className="block mb-2 text-xs font-bold tracking-wide text-gray-500 uppercase">Last Name</label>
-                                        <input type="text" placeholder="Doe" className="w-full px-5 py-4 transition-all bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm" />
+                                        <input type="text" placeholder="Perera" className="w-full px-5 py-4 transition-all bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm" />
                                     </div>
                                 </div>
 
                                 <div>
                                     <label className="block mb-2 text-xs font-bold tracking-wide text-gray-500 uppercase">Email Address</label>
-                                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" required className="w-full px-5 py-4 transition-all bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm" />
+                                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="danushkaper@gmail.com" required className="w-full px-5 py-4 transition-all bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm" />
                                 </div>
 
                                 <div>

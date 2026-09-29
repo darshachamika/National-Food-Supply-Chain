@@ -26,7 +26,7 @@ const cityCoordinates = {
 const createCustomIcon = (status) => {
     const isCritical = status === 'Critical';
     const isLow = status === 'Low';
-    
+
     let colorClass = 'bg-teal-500';
     let ringClass = 'border-teal-200';
     let shadowClass = 'shadow-teal-500/50';
@@ -64,20 +64,20 @@ const LiveMap = ({ stocks = [] }) => {
 
     const getPosition = (locationName) => {
         if (!locationName) return [7.8731, 80.7718];
-        const key = Object.keys(cityCoordinates).find(city => 
+        const key = Object.keys(cityCoordinates).find(city =>
             locationName.toLowerCase().includes(city.toLowerCase())
         );
         const offset = offsets[key] || [0, 0];
         return key ? [
-            cityCoordinates[key][0] + offset[0], 
+            cityCoordinates[key][0] + offset[0],
             cityCoordinates[key][1] + offset[1]
         ] : [7.8731, 80.7718];
     };
 
     return (
         <div className="w-full mb-6 overflow-hidden transition-all duration-500 bg-white/70 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] group relative">
-             <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full mix-blend-multiply blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150"></div>
-            
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full mix-blend-multiply blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150"></div>
+
             <div className="relative flex items-center justify-between p-6 border-b border-white/40 z-10">
                 <div className="flex items-center gap-3">
                     <div className="p-3 shadow-inner bg-teal-50 text-teal-600 rounded-2xl shadow-teal-500/20">
@@ -97,16 +97,17 @@ const LiveMap = ({ stocks = [] }) => {
                 </div>
             </div>
 
-            <MapContainer 
-                center={[7.8731, 80.7718]} 
-                zoom={7} 
-                scrollWheelZoom={false} 
+            <MapContainer
+                center={[7.8731, 80.7718]}
+                zoom={7}
+                scrollWheelZoom={false}
                 className="relative z-0 w-full rounded-b-[2rem]"
                 style={{ height: "450px" }}
             >
                 <TileLayer
-                    attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>'
-                    url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    maxZoom={19}
                 />
 
                 {stocks.map((item, index) => (

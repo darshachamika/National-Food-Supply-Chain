@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './pages/Home';
-import About from './pages/about';
+import About from './pages/About';
 import Services from './pages/Services';
 import Marketplace from './pages/Marketplace';
 import Contact from './pages/Contact';
